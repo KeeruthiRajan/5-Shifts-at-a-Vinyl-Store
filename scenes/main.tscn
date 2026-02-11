@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b5bae5mexybo5"]
+
+[ext_resource type="Texture2D" uid="uid://ctpc5hl8p1u5l" path="res://icon.svg" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://345t8rc4sm0w" path="res://scripts/control.gd" id="1_sugp2"]
+
+[node name="Base" type="Node2D" unique_id=185890852]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1056906620]
+position = Vector2(573, 320)
+
+[node name="Control" type="Control" parent="." unique_id=1211015157]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sugp2")
+
+[node name="Button" type="Button" parent="Control" unique_id=1295772100]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 254.0
+offset_right = 642.0
+offset_bottom = 436.0
+text = "Click me!"
+icon = ExtResource("1_0wfyh")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=960040446]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 143.0
+offset_right = 575.0
+offset_bottom = 183.0
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 2
+tab_size = 5
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
