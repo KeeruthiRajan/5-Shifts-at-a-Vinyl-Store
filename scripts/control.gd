@@ -5,7 +5,7 @@ var dialogues = [
 	"I don’t want something [b]happy[/b].",
 	"I want something that understands being tired.",
 	"Something warm... but heavy.",
-	"You recommended [b][i]In Rainbows[/i][/b]"
+	"You recommended [b][i][color=gold]In Rainbows - Radiohead[/color][/i][/b]"
 ]
 
 var current_line = -1
