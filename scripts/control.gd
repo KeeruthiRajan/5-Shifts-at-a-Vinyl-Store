@@ -1,5 +1,6 @@
 extends Control
-@onready var rich_text_label: RichTextLabel = $TextBox
+@onready var rich_text_label: RichTextLabel = $TextPanel/TextBox
+
 
 var dialogues = [
 	"I don’t want something [b]happy[/b].",
@@ -15,7 +16,7 @@ func _ready() -> void:
 	rich_text_label.text = ""
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func _on_button_pressed() -> void:

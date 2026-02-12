@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://b5bae5mexybo5"]
 
 [ext_resource type="Script" uid="uid://345t8rc4sm0w" path="res://scripts/control.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://dpsy1rf0bk4ql" path="res://scenes/brown.png" id="2_0wfyh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wfyh"]
+texture = ExtResource("2_0wfyh")
 
 [node name="Base" type="Node2D" unique_id=185890852]
 
@@ -14,6 +18,35 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_sugp2")
 
+[node name="TextPanel" type="Panel" parent="Control" unique_id=604786015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 297.0
+offset_top = 190.0
+offset_right = 763.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0wfyh")
+
+[node name="TextBox" type="RichTextLabel" parent="Control/TextPanel" unique_id=960040446]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = 9.0
+offset_right = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 2
+tab_size = 5
+
 [node name="Description" type="Button" parent="Control" unique_id=1295772100]
 layout_mode = 0
 offset_left = 91.0
@@ -24,17 +57,6 @@ text = "Description"
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="TextBox" type="RichTextLabel" parent="Control" unique_id=960040446]
-layout_mode = 0
-offset_left = 322.0
-offset_top = 170.0
-offset_right = 822.0
-offset_bottom = 210.0
-bbcode_enabled = true
-scroll_active = false
-autowrap_mode = 2
-tab_size = 5
-
 [node name="Recommend" type="Button" parent="Control" unique_id=1014069383]
 layout_mode = 0
 offset_left = 913.0
@@ -42,6 +64,10 @@ offset_top = 529.0
 offset_right = 1034.0
 offset_bottom = 579.0
 text = "Recommend"
+
+[node name="Customer" type="Node2D" parent="." unique_id=1697737353]
+
+[node name="Sprite2D" type="Sprite2D" parent="Customer" unique_id=969644298]
 
 [connection signal="pressed" from="Control/Description" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Description" to="Control/Description" method="_on_pressed"]
