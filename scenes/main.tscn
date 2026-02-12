@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b5bae5mexybo5"]
 
-[ext_resource type="Texture2D" uid="uid://ctpc5hl8p1u5l" path="res://icon.svg" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://345t8rc4sm0w" path="res://scripts/control.gd" id="1_sugp2"]
 
 [node name="Base" type="Node2D" unique_id=185890852]
@@ -15,27 +14,35 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_sugp2")
 
-[node name="Button" type="Button" parent="Control" unique_id=1295772100]
+[node name="Description" type="Button" parent="Control" unique_id=1295772100]
 layout_mode = 0
-offset_left = 506.0
-offset_top = 254.0
-offset_right = 642.0
-offset_bottom = 436.0
-text = "Click me!"
-icon = ExtResource("1_0wfyh")
+offset_left = 91.0
+offset_top = 530.0
+offset_right = 227.0
+offset_bottom = 584.0
+text = "Description"
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=960040446]
+[node name="TextBox" type="RichTextLabel" parent="Control" unique_id=960040446]
 layout_mode = 0
-offset_left = 535.0
-offset_top = 143.0
-offset_right = 575.0
-offset_bottom = 183.0
+offset_left = 322.0
+offset_top = 170.0
+offset_right = 822.0
+offset_bottom = 210.0
 bbcode_enabled = true
 scroll_active = false
 autowrap_mode = 2
 tab_size = 5
 
-[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
+[node name="Recommend" type="Button" parent="Control" unique_id=1014069383]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 529.0
+offset_right = 1034.0
+offset_bottom = 579.0
+text = "Recommend"
+
+[connection signal="pressed" from="Control/Description" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Description" to="Control/Description" method="_on_pressed"]
+[connection signal="pressed" from="Control/Recommend" to="Control" method="_on_recommend_pressed"]
