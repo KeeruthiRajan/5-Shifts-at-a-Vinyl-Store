@@ -1,7 +1,6 @@
 extends Control
 @onready var rich_text_label: RichTextLabel = $TextPanel/TextBox
 
-
 var dialogues = [
 	"I don’t want something [b]happy[/b].",
 	"I want something that understands being tired.",
@@ -18,15 +17,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-	
-func _on_button_pressed() -> void:
-	if current_line == 3:
-		current_line = -1
-	current_line += 1
-	if current_line > 2:
-		current_line %= 3
-	rich_text_label.text = dialogues[current_line]
-	
+		
 func _on_recommend_pressed() -> void:
-	current_line = 3
+	rich_text_label.text = dialogues[3]
+	
+func _on_texture_button_pressed() -> void:
+	current_line += 1
+	current_line %= 3
 	rich_text_label.text = dialogues[current_line]
