@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://345t8rc4sm0w" path="res://scripts/control.gd" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://dpsy1rf0bk4ql" path="res://scenes/brown.png" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://drmeddeocan7p" path="res://assets/customer1.png" id="3_sugp2"]
+[ext_resource type="Texture2D" uid="uid://bx6v44ajkxky1" path="res://assets/customer1pressed.png" id="4_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://dutbr81cnvxqr" path="res://assets/customer1hover.png" id="5_tefeu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wfyh"]
 texture = ExtResource("2_0wfyh")
@@ -24,9 +26,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 297.0
+offset_left = 318.0
 offset_top = 190.0
-offset_right = 763.0
+offset_right = 784.0
 offset_bottom = 190.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -37,9 +39,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 31.0
+offset_left = 37.0
 offset_top = 9.0
-offset_right = -48.0
+offset_right = -42.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -48,22 +50,12 @@ scroll_active = false
 autowrap_mode = 2
 tab_size = 5
 
-[node name="Description" type="Button" parent="Control" unique_id=1295772100]
-layout_mode = 0
-offset_left = 91.0
-offset_top = 530.0
-offset_right = 227.0
-offset_bottom = 584.0
-text = "Description"
-icon_alignment = 1
-vertical_icon_alignment = 0
-
 [node name="Recommend" type="Button" parent="Control" unique_id=1014069383]
 layout_mode = 0
-offset_left = 913.0
-offset_top = 529.0
-offset_right = 1034.0
-offset_bottom = 579.0
+offset_left = 504.0
+offset_top = 468.0
+offset_right = 625.0
+offset_bottom = 518.0
 text = "Recommend"
 
 [node name="Customer" type="Node2D" parent="." unique_id=1697737353]
@@ -76,6 +68,8 @@ offset_top = -53.0
 offset_right = 87.0
 offset_bottom = 133.0
 texture_normal = ExtResource("3_sugp2")
+texture_pressed = ExtResource("4_tbgi4")
+texture_hover = ExtResource("5_tefeu")
 stretch_mode = 0
 
 [connection signal="pressed" from="Control/Recommend" to="Control" method="_on_recommend_pressed"]
