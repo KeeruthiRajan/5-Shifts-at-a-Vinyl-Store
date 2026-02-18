@@ -3,59 +3,23 @@
 [ext_resource type="Texture2D" uid="uid://cfulscsv0ud5k" path="res://assets/npcs/customer_sprite_template.png" id="1_qfncu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfncu"]
-size = Vector2(49, 89)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hfwcf"]
-atlas = ExtResource("1_qfncu")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnvcy"]
-atlas = ExtResource("1_qfncu")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dt3gk"]
-atlas = ExtResource("1_qfncu")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5mac2"]
-atlas = ExtResource("1_qfncu")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fm0no"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hfwcf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xnvcy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dt3gk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5mac2")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
+size = Vector2(5.875, 50.5)
 
 [node name="Subscene" type="Node2D" unique_id=406568804]
 
 [node name="Customer" type="CharacterBody2D" parent="." unique_id=6555322]
-position = Vector2(559, 269)
+position = Vector2(559, 285)
 
-[node name="Area2D" type="Area2D" parent="Customer" unique_id=1534874750]
+[node name="Sprite2D" type="Sprite2D" parent="Customer" unique_id=1213510049]
+texture_filter = 1
+texture = ExtResource("1_qfncu")
+hframes = 2
+vframes = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Customer/Area2D" unique_id=110541481]
-position = Vector2(-0.5, 12.5)
+[node name="Area2D" type="Area2D" parent="Customer/Sprite2D" unique_id=1534874750]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Customer/Sprite2D/Area2D" unique_id=110541481]
+position = Vector2(0.0625, -7)
 shape = SubResource("RectangleShape2D_qfncu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Customer" unique_id=1898573481]
-texture_filter = 1
-position = Vector2(1.5258789e-05, 0)
-scale = Vector2(8.671879, 8.671879)
-sprite_frames = SubResource("SpriteFrames_fm0no")
-animation = &"walk"
-frame_progress = 0.9474914
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=268017436]
