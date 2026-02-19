@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://drmeddeocan7p" path="res://assets/npcs/customer1.png" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://bx6v44ajkxky1" path="res://assets/npcs/customer1pressed.png" id="4_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://dutbr81cnvxqr" path="res://assets/npcs/customer1hover.png" id="5_tefeu"]
+[ext_resource type="Texture2D" uid="uid://lgr0xnho3je0" path="res://assets/tiles/bookshelf.png" id="9_85g3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ya4ey"]
 texture = ExtResource("1_tipki")
@@ -97,6 +98,15 @@ texture_normal = ExtResource("5_tefeu")
 texture_pressed = ExtResource("4_tbgi4")
 texture_hover = ExtResource("3_sugp2")
 stretch_mode = 0
+
+[node name="Shelves" type="TextureButton" parent="." unique_id=1602288005]
+texture_filter = 1
+offset_left = 868.0
+offset_top = 293.0
+offset_right = 1105.0
+offset_bottom = 523.0
+texture_normal = ExtResource("9_85g3d")
+stretch_mode = 4
 
 [connection signal="pressed" from="Control/Recommend" to="Control" method="_on_recommend_pressed"]
 [connection signal="pressed" from="Customer/TextureButton" to="Control" method="_on_texture_button_pressed"]
