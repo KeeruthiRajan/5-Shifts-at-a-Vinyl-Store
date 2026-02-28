@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="5_Shifts_at_a_Vinyl_Store"
-run/main_scene="uid://b5bae5mexybo5"
+run/main_scene="uid://cgyeomkrrwc3d"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
