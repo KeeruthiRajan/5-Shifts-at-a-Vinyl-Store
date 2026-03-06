@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Offline</title>
+	<link rel='stylesheet' href='/stylesheets/offline.css' />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+</head>
+
+<body>
+
+
+		<svg width="83" height="20" viewBox="0 0 83 20"><style>.a{fill:#EAEAEA;}</style><polygon points="7 16 6 16 6 0 0 0 0 20 13 20 13 13 7 13 " class="a"/><path d="M14 20h13V0H14V20zM20 4h1v12h-1V4z" class="a"/><polygon points="35 8 35 4 36 4 36 7 41 7 41 0 28 0 28 12 35 12 35 16 34 16 34 13 28 13 28 20 41 20 41 8 " class="a"/><path d="M42 20h6v-5h7V0H42V20zM48 4h1v7h-1V4z" class="a"/><polygon points="56 20 69 20 69 13 63 13 63 16 62 16 62 12 69 12 69 8 62 8 62 4 63 4 63 7 69 7 69 0 56 0 " class="a"/><polygon points="83 8 83 0 70 0 70 20 83 20 83 13 77 13 77 16 76 16 76 4 77 4 77 8 " class="a"/></svg>
+
+		<p>You are currently offline.</p>
+
+		<p><a id="refresh" href="#" onclick="window.location.reload(true);"><svg width="1792" height="1792" viewBox="0 0 1792 1792"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z" fill="#fff"/></svg> try again</a></p>
+</body>
+
+</html>
