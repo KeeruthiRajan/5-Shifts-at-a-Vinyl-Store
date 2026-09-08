@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://coeqm6soiwmwx"]
+
+[ext_resource type="Script" uid="uid://dde0m7daa6huc" path="res://scripts/genre_button.gd" id="1_efby1"]
+[ext_resource type="Texture2D" uid="uid://c556jj8ni74pn" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="2_i0wvp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0wvp"]
+radius = 32.06244
+
+[node name="GenreButton" type="Area2D" unique_id=1960253428]
+script = ExtResource("1_efby1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=21942224]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_i0wvp")
+region_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1764858764]
+shape = SubResource("CircleShape2D_i0wvp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
