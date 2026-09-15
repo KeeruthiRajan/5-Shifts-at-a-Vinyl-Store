@@ -1,0 +1,74 @@
+{
+	"albums": {
+		"rock": [
+			{
+				"id": "in_rainbows",
+				"title": "In Rainbows",
+				"artist": "Radiohead",
+				"year": 2007,
+				"genres": ["rock", "alternative rock"],
+				"cover": "res://assets/albums/in_rainbows.jpg"
+			},
+			{
+				"id": "ok_computer",
+				"title": "OK Computer",
+				"artist": "Radiohead",
+				"year": 1997,
+				"genres": ["rock", "alternative rock"],
+				"cover": "res://assets/albums/ok_computer.jpg"
+			},
+			{
+				"id": "the_dark_side_of_the_moon",
+				"title": "The Dark Side of the Moon",
+				"artist": "Pink Floyd",
+				"year": 1973,
+				"genres": ["rock", "progressive rock"],
+				"cover": "res://assets/albums/dark_side_of_the_moon.jpg"
+			},
+			{
+				"id": "abbey_road",
+				"title": "Abbey Road",
+				"artist": "The Beatles",
+				"year": 1969,
+				"genres": ["rock", "pop rock"],
+				"cover": "res://assets/albums/abbey_road.jpg"
+			}
+		],
+		"jazz": [
+			{
+				"id": "kind_of_blue",
+				"title": "Kind of Blue",
+				"artist": "Miles Davis",
+				"year": 1959,
+				"genres": ["jazz", "cool jazz"],
+				"cover": "res://assets/albums/kind_of_blue.jpg"
+			},
+			{
+				"id": "blue_train",
+				"title": "Blue Train",
+				"artist": "John Coltrane",
+				"year": 1957,
+				"genres": ["jazz", "hard bop"],
+				"cover": "res://assets/albums/blue_train.jpg"
+			},
+			{
+				"id": "a_love_supreme",
+				"title": "A Love Supreme",
+				"artist": "John Coltrane",
+				"year": 1965,
+				"genres": ["jazz", "avant-garde jazz"],
+				"cover": "res://assets/albums/a_love_supreme.jpg"
+			}
+		],
+		"misc": [
+			{
+				"id": "random_access_memories",
+				"title": "Random Access Memories",
+				"artist": "Daft Punk",
+				"year": 2013,
+				"genres": ["electronic", "disco"],
+				"cover": "res://assets/albums/random_access_memories.jpg"
+			}
+		]
+	}
+}

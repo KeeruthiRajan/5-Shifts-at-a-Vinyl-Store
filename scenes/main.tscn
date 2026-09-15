@@ -44,7 +44,8 @@ position = Vector2(573, 320)
 [node name="Control" type="Control" parent="." unique_id=1211015157]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = -3.0
+offset_right = 37.0
 offset_bottom = 40.0
 script = ExtResource("1_sugp2")
 

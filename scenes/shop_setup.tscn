@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://cgyeomkrrwc3d"]
 
+[ext_resource type="Script" uid="uid://deih18f2lo5ar" path="res://scripts/shop_setup.gd" id="1_sxh76"]
 [ext_resource type="TileSet" uid="uid://dybe4iy3vxiga" path="res://assets/modern_interior_rooms.tres" id="3_8qdql"]
 [ext_resource type="TileSet" uid="uid://k212s0artg5f" path="res://assets/interior_props.tres" id="4_08n36"]
 [ext_resource type="PackedScene" uid="uid://coeqm6soiwmwx" path="res://scenes/genre_button.tscn" id="6_sxh76"]
 [ext_resource type="Script" uid="uid://befq70e3jrd83" path="res://scripts/tint.gd" id="6_utd63"]
-[ext_resource type="Script" uid="uid://dkw6vug06dxs1" path="res://scenes/character_body_2d.gd" id="7_1rof5"]
+[ext_resource type="Script" uid="uid://dkw6vug06dxs1" path="res://scripts/character_body_2d.gd" id="7_1rof5"]
 [ext_resource type="Texture2D" uid="uid://51i2vfybda2a" path="res://assets/Modern tiles_Free/Characters_free/Adam_16x16.png" id="8_1rof5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rof5"]
@@ -178,6 +179,7 @@ _data = {
 size = Vector2(30, 28)
 
 [node name="ShopSetup" type="Node2D" unique_id=220965663]
+script = ExtResource("1_sxh76")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=796299922]
 position = Vector2(576, 335.00003)
@@ -233,12 +235,14 @@ tile_set = ExtResource("4_08n36")
 
 [node name="IntShelves" type="Node2D" parent="." unique_id=671756448]
 
-[node name="TributeZone" parent="IntShelves" unique_id=1960253428 instance=ExtResource("6_sxh76")]
+[node name="TributeZone" parent="IntShelves" unique_id=1960253428 node_paths=PackedStringArray("shop_setup") instance=ExtResource("6_sxh76")]
 position = Vector2(333, 472)
+shop_setup = NodePath("../..")
 genre = 4
 
-[node name="JazzShelf" parent="IntShelves" unique_id=884939962 instance=ExtResource("6_sxh76")]
+[node name="JazzShelf" parent="IntShelves" unique_id=884939962 node_paths=PackedStringArray("shop_setup") instance=ExtResource("6_sxh76")]
 position = Vector2(401, 466)
+shop_setup = NodePath("../..")
 genre = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="IntShelves/JazzShelf" unique_id=1300178237]
@@ -247,8 +251,9 @@ genre = 1
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1rof5")
 
-[node name="PopShelf" parent="IntShelves" unique_id=1790661812 instance=ExtResource("6_sxh76")]
+[node name="PopShelf" parent="IntShelves" unique_id=1790661812 node_paths=PackedStringArray("shop_setup") instance=ExtResource("6_sxh76")]
 position = Vector2(552, 173)
+shop_setup = NodePath("../..")
 genre = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="IntShelves/PopShelf" unique_id=1808871835]
@@ -257,8 +262,9 @@ genre = 2
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1rof5")
 
-[node name="RapShelf" parent="IntShelves" unique_id=1066825522 instance=ExtResource("6_sxh76")]
+[node name="RapShelf" parent="IntShelves" unique_id=1066825522 node_paths=PackedStringArray("shop_setup") instance=ExtResource("6_sxh76")]
 position = Vector2(894, 173)
+shop_setup = NodePath("../..")
 genre = 3
 
 [node name="StaticBody2D" type="StaticBody2D" parent="IntShelves/RapShelf" unique_id=1239324911]
@@ -267,12 +273,13 @@ genre = 3
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1rof5")
 
-[node name="RockShelf" parent="IntShelves" unique_id=2041955209 instance=ExtResource("6_sxh76")]
-position = Vector2(961, 173)
+[node name="RockShelf" parent="IntShelves" unique_id=746768741 node_paths=PackedStringArray("shop_setup") instance=ExtResource("6_sxh76")]
+position = Vector2(964, 173)
+shop_setup = NodePath("../..")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="IntShelves/RockShelf" unique_id=1388623420]
+[node name="StaticBody2D" type="StaticBody2D" parent="IntShelves/RockShelf" unique_id=1785683337]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IntShelves/RockShelf/StaticBody2D" unique_id=1001972579]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IntShelves/RockShelf/StaticBody2D" unique_id=1184430051]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1rof5")
 

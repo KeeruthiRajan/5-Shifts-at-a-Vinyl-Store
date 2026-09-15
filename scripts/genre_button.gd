@@ -1,5 +1,5 @@
 extends Area2D
-
+@export var shop_setup: Node
 var player_in_range = false
 
 enum Genre {
@@ -11,7 +11,6 @@ enum Genre {
 }
 
 @export var genre: Genre
-
 
 func set_sprite():
 	$Sprite2D.region_enabled = true
@@ -41,19 +40,19 @@ func _ready() -> void:
 func interact():
 	match genre:
 		Genre.ROCK:
-			print("Never knew a clothing brand made music.")
+			shop_setup.open_menu("rock")
 
 		Genre.JAZZ:
-			print("Chet Baker's kinda cool...")
+			shop_setup.open_menu("jazz")
 
 		Genre.POP:
-			print("Sabrina Carpenter's show worn heel!?")
+			shop_setup.open_menu("pop")
 			
 		Genre.RAP:
-			print("This 'Drake' guy must really suck, wdym 50 copies left?")
+			shop_setup.open_menu("rap")
 
 		Genre.TRIBUTE:
-			print("King of Pop, Michael Jackson...")
+			print("Fly high, King of Pop...")
 
 
 func _process(_delta: float) -> void:
@@ -64,8 +63,10 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = true
+		# print("Player in.")
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
+		# print("Player out.")

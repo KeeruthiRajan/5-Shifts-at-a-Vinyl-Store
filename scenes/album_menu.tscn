@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://fhj688gfqnq3"]
 
 [ext_resource type="Texture2D" uid="uid://chqem7jm4mcjd" path="res://assets/tiles/Inrainbowscover.png" id="1_viviy"]
+[ext_resource type="Script" uid="uid://16i7eyqv0l2t" path="res://scripts/album_database.gd" id="2_65eg4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjahr"]
 bg_color = Color(0.50572383, 0.055636533, 0.15455371, 1)
@@ -9,21 +10,14 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_viviy"]
+
 [node name="Selection_Menu" type="Control" unique_id=273290331]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-
-[node name="Overlay" type="ColorRect" parent="." unique_id=1590012242]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.69965345, 0.6996535, 0.6996533, 1)
+script = ExtResource("2_65eg4")
 
 [node name="MenuPanel" type="Panel" parent="." unique_id=1110693386]
 layout_mode = 1
@@ -69,26 +63,41 @@ alignment = 1
 [node name="PrevButton" type="Button" parent="MenuPanel/MarginContainer/MainVBox/SelectionArea" unique_id=1851094330]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "◀"
 
+[node name="Label" type="Label" parent="MenuPanel/MarginContainer/MainVBox/SelectionArea" unique_id=1597004076]
+layout_mode = 2
+text = "    "
+label_settings = SubResource("LabelSettings_viviy")
+
 [node name="ArtWork" type="TextureRect" parent="MenuPanel/MarginContainer/MainVBox/SelectionArea" unique_id=1658850269]
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(240, 240)
 layout_mode = 2
 texture = ExtResource("1_viviy")
+expand_mode = 1
 stretch_mode = 5
 
-[node name="PrevButton2" type="Button" parent="MenuPanel/MarginContainer/MainVBox/SelectionArea" unique_id=1726487619]
+[node name="Label2" type="Label" parent="MenuPanel/MarginContainer/MainVBox/SelectionArea" unique_id=763595045]
+layout_mode = 2
+text = "    "
+
+[node name="NextButton" type="Button" parent="MenuPanel/MarginContainer/MainVBox/SelectionArea" unique_id=1726487619]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "▶"
 
 [node name="InfoArea" type="VBoxContainer" parent="MenuPanel/MarginContainer/MainVBox" unique_id=997572076]
 layout_mode = 2
+theme_override_constants/separation = 8
 alignment = 1
 
 [node name="Name" type="Label" parent="MenuPanel/MarginContainer/MainVBox/InfoArea" unique_id=1508698778]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "IN RAINBOWS"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -112,12 +121,20 @@ layout_mode = 2
 alignment = 1
 
 [node name="Select" type="Button" parent="MenuPanel/MarginContainer/MainVBox/Actions" unique_id=989549654]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "SELECT"
 
 [node name="Back" type="Button" parent="MenuPanel/MarginContainer/MainVBox/Actions" unique_id=1193579890]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "BACK"
 
 [node name="Label" type="Label" parent="MenuPanel/MarginContainer/MainVBox/Actions" unique_id=1820882748]
 layout_mode = 2
+
+[connection signal="pressed" from="MenuPanel/MarginContainer/MainVBox/SelectionArea/PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="MenuPanel/MarginContainer/MainVBox/SelectionArea/NextButton" to="." method="_on_next_button_pressed"]
